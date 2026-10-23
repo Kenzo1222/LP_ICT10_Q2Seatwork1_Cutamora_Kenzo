@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <title>Quarter 2 Seatwork - Basketball Varsity</title>
+    <style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f0a0d;
+            background: radial-gradient(circle at top, #2b0e14 0%, #0d090c 70%);
+            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+       
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff2600;
+            font-size: 26px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(255, 13, 0, 0.4);
+        }
+
+        header p {
+            color: #8c8189;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 420px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+        form {
+            width: 100%;
+            background-color: #17181c;
+            border: 2px solid #a91e05;
+            border-radius: 12px;
+            padding: 30px 25px;
+            box-shadow: 0 0 15px rgba(255, 170, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background-color: #0e1013;
+            border: 1px solid #2a2e35;
+            border-radius: 6px;
+            padding: 12px 15px;
+            color: #e0e0e0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #551001;
+        }
+
+        input[type="text"]::placeholder {
+            color: #555b66;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 15px;
+        }
+
+        
+        input[type="button"] {
+            width: 100%;
+            background: linear-gradient(180deg, #990f23 0%, #610512 100%);
+            border: 1.5px solid #560505;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 2px;
+            padding: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        input[type="button"]:hover {
+            background: linear-gradient(180deg, #b8142c 0%, #7d0818 100%);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+        }
+
+        
+        #result {
+            width: 100%;
+            margin-top: 25px;
+            empty-cells: hide;
+        }
+
+        
+        #result:not(:empty) {
+            background-color: #111a1f;
+            border-left: 4px solid #f6fafb;
+            border-radius: 8px;
+            padding: 18px;
+            text-align: center;
+            color: #ac0404;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            background-color: #700918;
+            border-top: 2px solid #420303;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 13px;
+            color: #f30404;
+        }
+
+        footer strong {
+            color: #890606;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="reactor"></div>
+        <h1> Basketball Varsity </h1>
+        <p> This club is for basketball. </p>
+    </header>
+
+    <main>
+        <form>
+            <input type="text" id="first_name" placeholder="Enter your First Name"> <br>
+            <input type="text" id="last_name" placeholder="Enter your Last Name"> <br>
+            <input type="button" py-click= "candidate_checker" value="Enter">
+        </form>
+        <div id="result">
+
+        </div>
+    </main>
+ <py-script src="main.py"></py-script>   
+</body>
+</html>
